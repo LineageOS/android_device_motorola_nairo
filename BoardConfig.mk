@@ -21,9 +21,6 @@ DEVICE_PATH := device/motorola/nairo
 # Display
 TARGET_SCREEN_DENSITY := 420
 
-# FM
-BOARD_HAVE_QCOM_FM := true
-
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
