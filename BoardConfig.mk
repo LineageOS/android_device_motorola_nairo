@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 
--include device/motorola/sm7250-common/BoardConfigCommon.mk
+# Inherit from sm7250-common
+include device/motorola/sm7250-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/motorola/nairo
 
@@ -69,3 +70,6 @@ VENDOR_SECURITY_PATCH := 2022-09-01
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# Inherit the proprietary files
+include vendor/motorola/nairo/BoardConfigVendor.mk
