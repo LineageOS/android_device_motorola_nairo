@@ -71,7 +71,7 @@ RECOVERY_KERNEL_MODULES := $(addsuffix .ko,$(BOARD_RECOVERY_RAMDISK_KERNEL_MODUL
 VENDOR_SECURITY_PATCH := 2022-09-01
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit the proprietary files
 include vendor/motorola/nairo/BoardConfigVendor.mk
