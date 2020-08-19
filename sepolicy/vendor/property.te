@@ -1,2 +1,2 @@
 # Fingerprint
-type moto_fingerprint_prop, property_type;
+vendor_public_prop(moto_fingerprint_prop)
