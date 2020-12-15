@@ -30,6 +30,9 @@ function blob_fixup() {
         "${PATCHELF}" --set-soname audio.primary.lito-moto.so "${2}"
         "${PATCHELF}" --replace-needed libtinyalsa.so libtinyalsa-moto.so "${2}"
         ;;
+    vendor/lib64/libvidhance.so)
+        "${PATCHELF}" --print-needed "${2}" |grep -q libcomparetf2_shim || "${PATCHELF}" --add-needed libcomparetf2_shim.so "${2}"
+	;;
     esac
 }
 
