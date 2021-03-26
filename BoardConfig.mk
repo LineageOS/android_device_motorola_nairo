@@ -39,5 +39,15 @@ TARGET_KERNEL_ADDITIONAL_FLAGS += \
 # Partitions
 BOARD_DTBOIMG_PARTITION_SIZE := 4194304
 
+# ODM
+ODM_MANIFEST_SKUS := \
+    dn \
+    f \
+    n
+
+ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/odm/manifest_dn.xml
+ODM_MANIFEST_F_FILES := $(DEVICE_PATH)/odm/manifest_f.xml
+ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/odm/manifest_n.xml
+
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
