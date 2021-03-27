@@ -61,8 +61,8 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Init
 PRODUCT_PACKAGES += \
+    init.oem.fingerprint.sh \
     init.oem.fingerprint2.sh \
-    init.oem.fingerprint.overlay.sh \
     init.mmi.overlay.rc \
     init.recovery.lkm.rc
 
