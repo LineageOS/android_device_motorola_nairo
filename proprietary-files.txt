@@ -14,6 +14,20 @@ vendor/etc/acdbdata/Speaker_cal.acdb
 vendor/firmware/aw882xx_rcv_reg.bin
 vendor/firmware/aw882xx_spk_reg.bin
 
+# Audio - Prebuilt
+vendor/lib/hw/audio.primary.lito.so
+vendor/lib/vndk/libtinyalsa.so
+vendor/lib/libAndroidAlgSys.so
+vendor/lib/libc++_shared.so
+vendor/lib/libMAM2_3-AlgFX-Coretex_A9.so
+vendor/lib/libmotaudioutils.so
+vendor/lib/libtinycompress_vendor.so
+
+# Audio - Soundfx
+vendor/lib/soundfx/libmaxxeffect-cembedded.so
+vendor/lib/soundfx/libmmieffectswrapper.so
+vendor/lib/soundfx/libspeakerbundle.so
+
 # Camera
 vendor/etc/camera/aec_golden_depth.bin
 vendor/etc/camera/aec_golden_wide.bin
