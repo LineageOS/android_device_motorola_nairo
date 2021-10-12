@@ -16,6 +16,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.physical.num=6
 
+# Cutout
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_hide_display_cutout=true
+
 # FM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.fm.use_audio_session=true
