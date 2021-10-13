@@ -16,14 +16,10 @@
 
 -include device/motorola/sm7250-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/racer
+DEVICE_PATH := device/motorola/nairo
 
 # Display
 TARGET_SCREEN_DENSITY := 420
-
-# FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.racer
-TARGET_USES_FOD_ZPOS := true
 
 # FM
 BOARD_HAVE_QCOM_FM := true
@@ -33,26 +29,16 @@ BOARD_HAS_QCA_FM_SOC := "cherokee"
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_RECOVERY_CONFIG := vendor/racer_recovery_defconfig
-TARGET_KERNEL_CONFIG := vendor/racer_defconfig
+TARGET_KERNEL_RECOVERY_CONFIG := vendor/nairo_recovery_defconfig
+TARGET_KERNEL_CONFIG := vendor/nairo_defconfig
 TARGET_KERNEL_ADDITIONAL_FLAGS += \
     DTC_PREBUILT=true \
     DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
     DTC_OVERLAY_TEST_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/ufdt_apply_overlay \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
 
-# Kernel modules - Audio
-TARGET_MODULE_ALIASES += \
-    snd-soc-aov-trigger.ko:aov_trigger.ko \
-    snd-soc-cs35l41-spi.ko:cirrus_cs35l41-spi.ko \
-    snd-soc-cs35l41.ko:cirrus_cs35l41.ko \
-    snd-soc-cs47l35.ko:cirrus_cs47l35.ko \
-    snd-soc-madera.ko:cirrus_madera.ko \
-    snd-soc-wm-adsp.ko:cirrus_wm_adsp.ko \
-    irq-madera.ko:cirrus_irq-madera.ko
-
 # Partitions
-BOARD_DTBOIMG_PARTITION_SIZE := 2097152
+BOARD_DTBOIMG_PARTITION_SIZE := 4194304
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
