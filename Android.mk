@@ -19,4 +19,16 @@ LOCAL_PATH := $(call my-dir)
 ifneq ($(filter nairo, $(TARGET_DEVICE)),)
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
+
+include $(CLEAR_VARS)
+
+AW882XX_CAL_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/aw_cali.bin
+$(AW882XX_CAL_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating aw882xx firmware symlinks: $@"
+	@rm -rf $@
+	@mkdir -p $(dir $@)
+	$(hide) ln -sf /mnt/vendor/persist/factory/audio/aw_cali.bin $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(AW882XX_CAL_SYMLINKS)
+
 endif
