@@ -41,7 +41,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Build info
 BUILD_FINGERPRINT := "motorola/nairo_retail/nairo:11/RPN31.Q4U-39-27-5/20ead:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=nairo_retail \
+    TARGET_PRODUCT=nairo_retail \
     PRIVATE_BUILD_DESC="nairo_retail-user 11 RPN31.Q4U-39-27-5 20ead release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
