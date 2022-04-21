@@ -28,11 +28,13 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyalsa.so', 'libtinyalsa-moto.so'),
     ('vendor/lib/hw/sound_trigger.primary.lito.so', 'vendor/lib/soundfx/libmmieffectswrapper.so', 'vendor/lib/soundfx/libspeakerbundle.so'): blob_fixup()
         .replace_needed('libtinyalsa.so', 'libtinyalsa-moto.so'),
+    ('vendor/lib64/hw/com.qti.chi.override.so', 'vendor/lib64/com.qti.feature2.gs.so'): blob_fixup()
+        .binary_regex_replace(b'camera.mot.is.coming.cts', b'vendor.camera.coming.cts'),
     'vendor/lib64/libvidhance.so': blob_fixup()
         .add_needed('libcomparetf2_shim.so'),
     'vendor/lib64/sensors.moto.so': blob_fixup()
         .add_needed('libbase_shim.so'),
-    ('vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so'): blob_fixup()
+    'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
         .sig_replace('8A 0A 00 94', '1F 20 03 D5'),
 }  # fmt: skip
 
