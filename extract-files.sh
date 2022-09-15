@@ -17,6 +17,10 @@ function blob_fixup() {
     vendor/bin/charge_only_mode)
         "${PATCHELF}" --add-needed libmemset_shim.so "${2}"
         ;;
+    # Prebuilt Audio
+    vendor/lib/hw/audio.primary.lito.so)
+        "${PATCHELF}" --replace-needed android.hardware.power-V1-ndk_platform.so android.hardware.power-V1-ndk.so "${2}"
+        ;;
     esac
 }
 
