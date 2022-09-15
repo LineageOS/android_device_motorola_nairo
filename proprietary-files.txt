@@ -209,11 +209,14 @@ vendor/lib64/libets_teeclient.so
 vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
 
 # HotwordEnrollment
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.lito.so
+vendor/lib64/hw/sound_trigger.primary.lito.so
 
 # MotCamera2
 -app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
