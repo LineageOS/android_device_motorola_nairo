@@ -26,7 +26,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib/hw/audio.primary.lito-moto.so': blob_fixup()
         .replace_needed('android.hardware.power-V1-ndk_platform.so', 'android.hardware.power-V1-ndk.so')
         .replace_needed('libtinyalsa.so', 'libtinyalsa-moto.so'),
-    ('vendor/lib/hw/sound_trigger.primary.lito.so', 'vendor/lib/soundfx/libmmieffectswrapper.so', 'vendor/lib/soundfx/libspeakerbundle.so'): blob_fixup()
+    'vendor/lib/hw/sound_trigger.primary.lito.so': blob_fixup()
         .replace_needed('libtinyalsa.so', 'libtinyalsa-moto.so'),
     'vendor/lib64/libvidhance.so': blob_fixup()
         .add_needed('libcomparetf2_shim.so'),
