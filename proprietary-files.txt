@@ -14,11 +14,6 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/firmware/aw882xx_rcv_reg.bin
 vendor/firmware/aw882xx_spk_reg.bin
 
-# Audio (FX modules)
-vendor/lib/soundfx/libmaxxeffect-cembedded.so
-vendor/lib/soundfx/libmmieffectswrapper.so
-vendor/lib/soundfx/libspeakerbundle.so
-
 # Audio hardware
 vendor/lib/hw/audio.primary.lito.so:vendor/lib/hw/audio.primary.lito-moto.so;FIX_SONAME
 vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa-moto.so;FIX_SONAME
