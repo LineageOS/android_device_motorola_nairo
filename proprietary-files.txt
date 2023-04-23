@@ -15,9 +15,8 @@ vendor/firmware/aw882xx_rcv_reg.bin
 vendor/firmware/aw882xx_spk_reg.bin
 
 # Audio (FX modules)
-vendor/lib/soundfx/libmaxxeffect-cembedded.so
-vendor/lib/soundfx/libmmieffectswrapper.so
-vendor/lib/soundfx/libspeakerbundle.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libshoebox.so
 
 # Audio hardware
 vendor/lib/hw/audio.primary.lito.so:vendor/lib/hw/audio.primary.lito-moto.so;FIX_SONAME
