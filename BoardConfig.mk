@@ -29,7 +29,7 @@ BOARD_HAS_QCA_FM_SOC := "cherokee"
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/nairo_defconfig
+TARGET_KERNEL_CONFIG := vendor/nairo_defconfig vendor/debugfs.config
 TARGET_KERNEL_ADDITIONAL_FLAGS += \
     DTC_PREBUILT=true \
     DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
