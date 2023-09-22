@@ -17,6 +17,19 @@ function blob_fixup() {
     vendor/bin/charge_only_mode)
         "${PATCHELF}" --add-needed libmemset_shim.so "${2}"
         ;;
+    # rename moto modified tinyalsa
+    vendor/lib/libtinyalsa-moto.so)
+        "${PATCHELF}" --set-soname libtinyalsa-moto.so "${2}"
+        ;;
+    # rename moto modified tinyalsa
+    vendor/lib/hw/sound_trigger.primary.lito.so | vendor/lib/soundfx/libmmieffectswrapper.so | vendor/lib/soundfx/libspeakerbundle.so)
+        "${PATCHELF}" --replace-needed libtinyalsa.so libtinyalsa-moto.so "${2}"
+        ;;
+    # rename moto modified primary audio to not conflict with source built
+    vendor/lib/hw/audio.primary.lito-moto.so)
+        "${PATCHELF}" --set-soname audio.primary.lito-moto.so "${2}"
+        "${PATCHELF}" --replace-needed libtinyalsa.so libtinyalsa-moto.so "${2}"
+        ;;
     # __lttf2 shim
     vendor/lib64/libvidhance.so)
         "${PATCHELF}" --print-needed "${2}" |grep -q libcomparetf2_shim || "${PATCHELF}" --add-needed libcomparetf2_shim.so "${2}"
