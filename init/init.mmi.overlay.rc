@@ -36,6 +36,8 @@ on fs
 
    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules aw882xx_k419.ko
 
+   chown system system /sys/class/touchscreen/primary/gesture
+
 on post-fs-data
    # Load DLKM that can afford being loaded later
    setprop vendor.mmi_init.stage late

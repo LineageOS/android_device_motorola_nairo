@@ -69,5 +69,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Touch
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/double-tap.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/double-tap.kl
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/nairo/nairo-vendor.mk)
