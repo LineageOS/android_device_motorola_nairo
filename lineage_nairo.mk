@@ -28,7 +28,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_nairo
 PRODUCT_DEVICE := nairo
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto G 5G Plus
+PRODUCT_MODEL := moto g 5G plus
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_AAPT_CONFIG := xxxhdpi
