@@ -43,8 +43,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.2-impl \
-    libgui_vendor
+    android.hardware.soundtrigger@2.2-impl
 
 # audio.primary.lito shim
 PRODUCT_PACKAGES += \
@@ -73,18 +72,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-egis.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-egis.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
 
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor \
-    com.motorola.hardware.biometric.fingerprint@1.0.vendor
-
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
-    libqcomfm_jni \
-    init.qti.fm.sh \
     qcom.fmradio
-
-PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Init
 PRODUCT_PACKAGES += \
