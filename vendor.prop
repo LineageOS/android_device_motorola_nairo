@@ -19,6 +19,10 @@ persist.vendor.camera.privapp.list=com.motorola.camera3
 ro.soc.manufacturer=QTI
 ro.soc.model=SM7250
 
+# Dalvik
+dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapsize=512m
+
 # Firmware
 ro.vendor.hw.modem_version=.
 
