@@ -38,10 +38,11 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 TARGET_SCREEN_HEIGHT := 2520
 TARGET_SCREEN_WIDTH := 1080
 
-# Build info
-BUILD_FINGERPRINT := "motorola/nairo_retail/nairo:11/RPNS31.Q1-51-40-11-4-13/7e3c4:user/release-keys"
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=nairo_retail \
-    PRIVATE_BUILD_DESC="nairo_retail-user 11 RPNS31.Q1-51-40-11-4-13 7e3c4 release-keys"
-
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+# Build info
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="nairo_retail-user 11 RPNS31.Q1-51-40-11-4-13 7e3c4 release-keys" \
+    BuildFingerprint=motorola/nairo_retail/nairo:11/RPNS31.Q1-51-40-11-4-13/7e3c4:user/release-keys \
+    DeviceProduct=nairo_retail
+
