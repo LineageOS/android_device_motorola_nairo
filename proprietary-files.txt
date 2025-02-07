@@ -215,6 +215,9 @@ product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON
 # Listen
 vendor/lib/hw/sound_trigger.primary.lito.so
 
+# Media configs
+vendor/etc/media_lagoon/video_system_specs.json
+
 # MotCamera2
 system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
 system/etc/permissions/com.motorola.motosignature.xml
