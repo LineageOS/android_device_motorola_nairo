@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b2525b8_256ae7e3",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-02-08T01:24:29Z",
+      "side": 1,
+      "message": "These should be in sm7250-common where the actual service lives",
+      "range": {
+        "startLine": 218,
+        "startChar": 0,
+        "endLine": 220,
+        "endChar": 48
+      },
+      "revId": "7c8d739bd54205e730ce656a441105b6380cfd6f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
