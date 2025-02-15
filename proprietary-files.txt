@@ -1,7 +1,6 @@
 # All unpinned blobs below are extracted from nairo_retail-user 11 RPNS31.Q1-51-40-11-4-13 7e3c4 release-keys - RETUS variant.
 
 # ACDB
-vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/Bluetooth_cal.acdb
 vendor/etc/acdbdata/General_cal.acdb
 vendor/etc/acdbdata/Global_cal.acdb
@@ -9,6 +8,7 @@ vendor/etc/acdbdata/Handset_cal.acdb
 vendor/etc/acdbdata/Hdmi_cal.acdb
 vendor/etc/acdbdata/Headset_cal.acdb
 vendor/etc/acdbdata/Speaker_cal.acdb
+vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Audio - Firmware
 vendor/firmware/aw882xx_rcv_reg.bin
@@ -16,12 +16,12 @@ vendor/firmware/aw882xx_spk_reg.bin
 
 # Audio - Prebuilt
 vendor/lib/hw/audio.primary.lito.so:vendor/lib/hw/audio.primary.lito-moto.so;FIX_SONAME
-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa-moto.so;FIX_SONAME
 vendor/lib/libAndroidAlgSys.so
-vendor/lib/libc++_shared.so
 vendor/lib/libMAM2_3-AlgFX-Coretex_A9.so;FIX_SONAME
+vendor/lib/libc++_shared.so
 vendor/lib/libmotaudioutils.so
 vendor/lib/libtinycompress_vendor.so
+vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa-moto.so;FIX_SONAME
 
 # Audio - Soundfx
 vendor/lib/soundfx/libmaxxeffect-cembedded.so
@@ -45,8 +45,36 @@ vendor/lib/libcamxstatscore.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libofflinelog.so
-vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/camera/com.mot.eeprom.mot_dw9767_s5kgm1sp_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov16a1q_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov2180_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_s5k5e9_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_ov02b1b_otp.so
+vendor/lib64/camera/com.mot.eeprom.mot_s5k4h7_front_otp_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_s5k4h7_rear_otp_eeprom.so
+vendor/lib64/camera/com.qti.sensor.mot_ov02b1b.so
+vendor/lib64/camera/com.qti.sensor.mot_ov16a1q.so
+vendor/lib64/camera/com.qti.sensor.mot_ov2180.so
+vendor/lib64/camera/com.qti.sensor.mot_s5k4h7_front.so
+vendor/lib64/camera/com.qti.sensor.mot_s5k4h7_rear.so
+vendor/lib64/camera/com.qti.sensor.mot_s5k5e9.so
+vendor/lib64/camera/com.qti.sensor.mot_s5kgm1sp.so
+vendor/lib64/camera/com.qti.sensormodule.mot_nairo_ov02b1b_ofilm.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_nairo_ov16a1q_ofilm.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_nairo_ov2180_ofilm.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5k4h7_front.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5k4h7_rear.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5k5e9_ofilm.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5k5e9_ofilm_main_flash.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5kgm1sp_ofilm.bin
+vendor/lib64/camera/com.qti.tuned.default.bin
+vendor/lib64/camera/com.qti.tuned.mot_nairo_ov02b1b.bin
+vendor/lib64/camera/com.qti.tuned.mot_nairo_ov16a1q.bin
+vendor/lib64/camera/com.qti.tuned.mot_nairo_ov2180.bin
+vendor/lib64/camera/com.qti.tuned.mot_nairo_s5k4h7_front.bin
+vendor/lib64/camera/com.qti.tuned.mot_nairo_s5k4h7_rear.bin
+vendor/lib64/camera/com.qti.tuned.mot_nairo_s5k5e9.bin
+vendor/lib64/camera/com.qti.tuned.mot_nairo_s5kgm1sp.bin
 vendor/lib64/camera/components/com.arcsoft.node.dc_capture.so
 vendor/lib64/camera/components/com.arcsoft.node.smooth_transition.so
 vendor/lib64/camera/components/com.arcsoft.node.uwdc_capture.so
@@ -68,63 +96,30 @@ vendor/lib64/camera/components/com.qti.node.memcpy.so
 vendor/lib64/camera/components/com.qti.node.remosaic.so
 vendor/lib64/camera/components/com.qti.node.stich.so
 vendor/lib64/camera/components/com.qti.node.swregistration.so
-vendor/lib64/camera/components/com.qtistatic.stats.aec.so
-vendor/lib64/camera/components/com.qtistatic.stats.af.so
-vendor/lib64/camera/components/com.qtistatic.stats.awb.so
-vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/com.qti.stats.aec.so
 vendor/lib64/camera/components/com.qti.stats.aecwrapper.so
-vendor/lib64/camera/components/com.qti.stats.afd.so
 vendor/lib64/camera/components/com.qti.stats.af.so
+vendor/lib64/camera/components/com.qti.stats.afd.so
 vendor/lib64/camera/components/com.qti.stats.afwrapper.so
 vendor/lib64/camera/components/com.qti.stats.asd.so
 vendor/lib64/camera/components/com.qti.stats.awb.so
 vendor/lib64/camera/components/com.qti.stats.awbwrapper.so
-vendor/lib64/camera/components/com.qti.stats.hafoverride.so
 vendor/lib64/camera/components/com.qti.stats.haf.so
+vendor/lib64/camera/components/com.qti.stats.hafoverride.so
 vendor/lib64/camera/components/com.qti.stats.pdlib.so
 vendor/lib64/camera/components/com.qti.stats.pdlibsony.so
 vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so
 vendor/lib64/camera/components/com.qti.stats.tracker.so
+vendor/lib64/camera/components/com.qtistatic.stats.aec.so
+vendor/lib64/camera/components/com.qtistatic.stats.af.so
+vendor/lib64/camera/components/com.qtistatic.stats.awb.so
+vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/com.vidhance.node.processing.so
 vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
-vendor/lib64/camera/com.mot.eeprom.mot_dw9767_s5kgm1sp_eeprom.so
-vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov16a1q_eeprom.so
-vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov2180_eeprom.so
-vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_s5k5e9_eeprom.so
-vendor/lib64/camera/com.mot.eeprom.mot_ov02b1b_otp.so
-vendor/lib64/camera/com.mot.eeprom.mot_s5k4h7_front_otp_eeprom.so
-vendor/lib64/camera/com.mot.eeprom.mot_s5k4h7_rear_otp_eeprom.so
-vendor/lib64/camera/com.qti.sensormodule.mot_nairo_ov02b1b_ofilm.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_nairo_ov16a1q_ofilm.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_nairo_ov2180_ofilm.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5k4h7_front.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5k4h7_rear.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5k5e9_ofilm.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5k5e9_ofilm_main_flash.bin
-vendor/lib64/camera/com.qti.sensormodule.mot_nairo_s5kgm1sp_ofilm.bin
-vendor/lib64/camera/com.qti.sensor.mot_ov02b1b.so
-vendor/lib64/camera/com.qti.sensor.mot_ov16a1q.so
-vendor/lib64/camera/com.qti.sensor.mot_ov2180.so
-vendor/lib64/camera/com.qti.sensor.mot_s5k4h7_front.so
-vendor/lib64/camera/com.qti.sensor.mot_s5k4h7_rear.so
-vendor/lib64/camera/com.qti.sensor.mot_s5k5e9.so
-vendor/lib64/camera/com.qti.sensor.mot_s5kgm1sp.so
-vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.qti.tuned.mot_nairo_ov02b1b.bin
-vendor/lib64/camera/com.qti.tuned.mot_nairo_ov16a1q.bin
-vendor/lib64/camera/com.qti.tuned.mot_nairo_ov2180.bin
-vendor/lib64/camera/com.qti.tuned.mot_nairo_s5k4h7_front.bin
-vendor/lib64/camera/com.qti.tuned.mot_nairo_s5k4h7_rear.bin
-vendor/lib64/camera/com.qti.tuned.mot_nairo_s5k5e9.bin
-vendor/lib64/camera/com.qti.tuned.mot_nairo_s5kgm1sp.bin
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/libarcsoft_dualcam_refocus_image.so
-vendor/lib64/libarcsoft_portrait_distortion_correction.so
-vendor/lib64/libarcsoft_zoomtranslator_imp.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
 vendor/lib64/com.qti.feature2.frameselect.so
@@ -140,6 +135,11 @@ vendor/lib64/com.qti.feature2.rt.so
 vendor/lib64/com.qti.feature2.serializer.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
+vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libarcsoft_dualcam_refocus_image.so
+vendor/lib64/libarcsoft_portrait_distortion_correction.so
+vendor/lib64/libarcsoft_zoomtranslator_imp.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamerapostproc.so
@@ -153,8 +153,8 @@ vendor/lib64/libcamxncs.so
 vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
-vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libchilog.so
+vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libfcell.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libmmcamera_faceproc.so
@@ -163,16 +163,16 @@ vendor/lib64/libmot_afd.so
 vendor/lib64/libmot_flash_aw3643.so
 vendor/lib64/libmot_lux_standardization.so
 vendor/lib64/libmpbase.so
-vendor/lib64/libofflinelog.so
-vendor/lib64/libsns_device_mode_stub.so
-vendor/lib64/libsnsdiaglog.so
-vendor/lib64/libsns_fastRPC_util.so
-vendor/lib64/libsns_low_lat_stream_stub.so
-vendor/lib64/libsns_registry_skel.so
-vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libmulticam_image_optical_zoom.so
 vendor/lib64/libmulticam_optical_zoom_control.so
 vendor/lib64/libmulticam_video_optical_zoom.so
+vendor/lib64/libofflinelog.so
+vendor/lib64/libsns_device_mode_stub.so
+vendor/lib64/libsns_fastRPC_util.so
+vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/libsns_registry_skel.so
+vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libvidhance.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
@@ -207,10 +207,10 @@ vendor/lib64/libets_teeclient.so
 vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
 
 # HotwordEnrollment
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
 product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.lito.so
@@ -223,13 +223,6 @@ vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/media_lagoon/video_system_specs.json
 
 # MotCamera2
-system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
-system/etc/permissions/com.motorola.motosignature.xml
-system/etc/permissions/moto-core_services.xml
-system/etc/permissions/moto-settings.xml
-system/framework/com.motorola.motosignature.jar
-system/framework/moto-core_services.jar
-system/framework/moto-settings.jar
 product/app/MotCamera2AI/MotCamera2AI.apk;PRESIGNED
 product/etc/init/init.motcamera2.rc
 product/etc/permissions/com.motorola.androidx.camera.extensions.xml
@@ -240,6 +233,13 @@ product/etc/permissions/privapp-permissions-com.motorola.camera2.xml
 product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera2.xml
 product/framework/com.motorola.androidx.camera.extensions.jar
 product/priv-app/MotCamera2/MotCamera2.apk
+system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
+system/etc/permissions/com.motorola.motosignature.xml
+system/etc/permissions/moto-core_services.xml
+system/etc/permissions/moto-settings.xml
+system/framework/com.motorola.motosignature.jar
+system/framework/moto-core_services.jar
+system/framework/moto-settings.jar
 system_ext/etc/public.libraries-motocamera.txt
 system_ext/lib/libmcf_native_window_helper.motocamera.so
 system_ext/lib64/libmcf_native_window_helper.motocamera.so
@@ -299,10 +299,10 @@ vendor/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bi
 
 # Vibrator firmware
 vendor/firmware/aw8695_haptic.bin
+vendor/firmware/aw8695_rtp.bin
 vendor/firmware/aw8695_rtp_Argo_Navis.bin
 vendor/firmware/aw8695_rtp_Attentive.bin
 vendor/firmware/aw8695_rtp_Awake.bin
-vendor/firmware/aw8695_rtp.bin
 vendor/firmware/aw8695_rtp_Bird_Loop.bin
 vendor/firmware/aw8695_rtp_Brilliant_Times.bin
 vendor/firmware/aw8695_rtp_Chimey_Phone.bin
