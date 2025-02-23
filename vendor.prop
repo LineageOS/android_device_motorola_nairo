@@ -51,5 +51,6 @@ media.recorder.show_manufacturer_and_model=true
 vendor.mm.en.sec.smoothstreaming=false
 
 # Sensors
+persist.vendor.sensors.allow_non_default_discovery=true
 ro.vendor.sensors.glance_approach=false
 ro.vendor.sensors.mot_ltv=true
