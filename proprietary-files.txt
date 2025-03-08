@@ -205,6 +205,10 @@ vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/libets_fp_et5.so
 vendor/lib64/libets_teeclient.so
 vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
+vendor/usr/idc/uinput-egis.idc
+vendor/usr/idc/uinput-fpc.idc
+vendor/usr/keylayout/uinput-egis.kl
+vendor/usr/keylayout/uinput-fpc.kl
 
 # HotwordEnrollment
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
