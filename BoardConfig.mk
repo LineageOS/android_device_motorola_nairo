@@ -8,6 +8,11 @@ include device/motorola/sm7250-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/motorola/nairo
 
+# Audio
+AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := true
+AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
+BOARD_SUPPORTS_OPENSOURCE_STHAL := true
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
