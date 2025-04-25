@@ -28,9 +28,9 @@ ODM_MANIFEST_SKUS := \
     f \
     n
 
-ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/odm/manifest_dn.xml
-ODM_MANIFEST_F_FILES := $(DEVICE_PATH)/odm/manifest_f.xml
-ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/odm/manifest_n.xml
+ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/sku/manifest_dn.xml
+ODM_MANIFEST_F_FILES := $(DEVICE_PATH)/sku/manifest_f.xml
+ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/sku/manifest_n.xml
 
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
