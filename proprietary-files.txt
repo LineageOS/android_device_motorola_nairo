@@ -217,6 +217,7 @@ vendor/lib/hw/sound_trigger.primary.lito.so
 
 # Media configs
 vendor/etc/media_lagoon/video_system_specs.json
+vendor/etc/media_profiles_vendor.xml:vendor/etc/media_profiles_V1_0.xml
 
 # MotCamera2
 product/app/MotCamera2AI/MotCamera2AI.apk;PRESIGNED
