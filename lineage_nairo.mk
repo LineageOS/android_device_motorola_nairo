@@ -20,6 +20,7 @@ PRODUCT_DEVICE := nairo
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g 5G plus
 PRODUCT_MANUFACTURER := motorola
+PRODUCT_SYSTEM_NAME := nairo_retail
 
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
@@ -34,5 +35,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="nairo_retail-user 11 RPNS31.Q1-51-40-11-4-13 7e3c4 release-keys" \
     BuildFingerprint=motorola/nairo_retail/nairo:11/RPNS31.Q1-51-40-11-4-13/7e3c4:user/release-keys \
-    DeviceProduct=nairo_retail
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
