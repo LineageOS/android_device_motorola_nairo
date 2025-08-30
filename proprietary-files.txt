@@ -246,7 +246,7 @@ system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk
 
 # NFC
 vendor/etc/libnfc-hal-st.conf
-vendor/etc/libnfc-nci-st.conf
+vendor/etc/libnfc-nci-st.conf:vendor/etc/libnfc-nci.conf
 vendor/etc/st21nfc_conf_ds.txt
 vendor/etc/st21nfc_conf_ss.txt
 vendor/firmware/st21nfc_fw.bin
