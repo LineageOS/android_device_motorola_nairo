@@ -58,6 +58,10 @@ def blob_fixup_graphic_buffer_size(
 
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/libnfc-hal-st.conf': blob_fixup()
+        # I33d07604e87a2d9466a3a857e281ee4b611330a8 "Switch NFC from HIDL to AIDL"
+        .regex_replace('White list', 'Allow list')
+        .regex_replace('DEVICE_HOST_WHITE_LIST', 'DEVICE_HOST_ALLOW_LIST'),
     'vendor/lib/hw/audio.primary.lito-moto.so': blob_fixup()
         .replace_needed('android.hardware.power-V1-ndk_platform.so', 'android.hardware.power-V1-ndk.so')
         .replace_needed('libtinyalsa.so', 'libtinyalsa-moto.so'),
