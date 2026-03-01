@@ -36,9 +36,6 @@ on fs
 
    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules aw882xx_k419.ko
 
-on fs && property:ro.build.type=userdebug
-   insmod /vendor/lib/modules/mmi_sigprint.ko
-
 on post-fs-data
    # Load DLKM that can afford being loaded later
    setprop vendor.mmi_init.stage late
