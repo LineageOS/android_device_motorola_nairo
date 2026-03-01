@@ -46,6 +46,7 @@ BOARD_RECOVERY_KERNEL_MODULES_LOAD := \
     mcDrvModule \
     sensors_class \
     mmi_relay \
+    touchscreen_mmi \
     sx933x_sar \
     nova_0flash_mmi
 
