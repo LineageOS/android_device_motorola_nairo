@@ -4,7 +4,7 @@ on early-init && property:ro.bootmode=mot-factory
    insmod /vendor/lib/modules/moto_f_usbnet.ko
 
 on early-init
-   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_annotate.ko mmi_info mmi_relay.ko touchscreen_mmi.ko tzlog_dump.ko watchdog_cpu_ctx.ko mcDrvModule
+   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_annotate.ko mmi_info mmi_relay.ko touchscreen_mmi.ko tzlog_dump.ko watchdog_cpu_ctx.ko
    # Time-consuming module, put it in the background
    # init.mmi.rc will change charger owership on post-fs-data,load it asap
    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules qpnp-smbcharger-mmi.ko

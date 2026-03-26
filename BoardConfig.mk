@@ -43,7 +43,6 @@ BOARD_RECOVERY_KERNEL_MODULES_LOAD := \
     qpnp-power-on-mmi \
     wl2864c \
     qpnp-smbcharger-mmi \
-    mcDrvModule \
     sensors_class \
     mmi_relay \
     touchscreen_mmi \
