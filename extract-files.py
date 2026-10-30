@@ -59,12 +59,31 @@ def blob_fixup_graphic_buffer_size(
                 f.write(b'\x00\xa6\x81\x52')  # AArch64 mov w0, #0xd30
 
 
+def blob_fixup_uwdc_preview_format(
+    ctx: BlobFixupCtx,
+    file: File,
+    file_path: str,
+    *args,
+    **kwargs,
+):
+    nv21 = bytes.fromhex('04 00 00 00 00 00 00 00 08 00 00 00 0C')
+    nv12 = bytes.fromhex('03 00 00 00 00 00 00 00 08 00 00 00 0C')
+
+    with open(file_path, 'rb+') as f:
+        data = f.read()
+        f.seek(0)
+        f.write(data.replace(nv21, nv12))
+
+
 blob_fixups: blob_fixups_user_type = {
     'vendor/etc/libnfc-hal-st.conf': blob_fixup()
         # I33d07604e87a2d9466a3a857e281ee4b611330a8 "Switch NFC from HIDL to AIDL"
         .regex_replace('White list', 'Allow list')
         .regex_replace('DEVICE_HOST_WHITE_LIST', 'DEVICE_HOST_ALLOW_LIST'),
-    ('vendor/lib64/hw/com.qti.chi.override.so', 'vendor/lib64/com.qti.feature2.gs.so'): blob_fixup()
+    'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
+        .binary_regex_replace(b'camera.mot.is.coming.cts', b'vendor.camera.coming.cts')
+        .call(blob_fixup_uwdc_preview_format),
+    'vendor/lib64/com.qti.feature2.gs.so': blob_fixup()
         .binary_regex_replace(b'camera.mot.is.coming.cts', b'vendor.camera.coming.cts'),
     'vendor/lib64/camera/components/com.vidhance.node.processing.so': blob_fixup()
         .call(blob_fixup_graphic_buffer_size),
