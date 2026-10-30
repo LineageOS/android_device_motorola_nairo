@@ -1,1 +1,2 @@
 outputFormat=OutputFormatYUV420NV12
+overrideDisableZSL=1
